@@ -36,3 +36,11 @@ uv run python manage.py runserver
 
 - http://127.0.0.1:8000/ - Formulario de registro
 - http://127.0.0.1:8000/usuarios/ - Lista de usuarios
+
+## Screenshots
+
+### Formulario de registro
+![Formulario](screenshots/formulario.png)
+
+### Base de datos
+![Base de datos](screenshots/base_datos.png)
