@@ -9,3 +9,8 @@ def crear_usuario(request):
         return redirect('crear_usuario')
 
     return render(request, 'usuarios/formulario.html')
+
+
+def listar_usuarios(request):
+    usuarios = Usuario.objects.all()
+    return render(request, 'usuarios/lista.html', {'usuarios': usuarios})
