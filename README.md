@@ -5,8 +5,8 @@ Proyecto Django con PostgreSQL para registro de usuarios.
 ## Requisitos
 
 - Python 3.10+
-- uv
 - Docker
+- uv (opcional)
 
 ## Instalacion
 
@@ -14,9 +14,21 @@ Proyecto Django con PostgreSQL para registro de usuarios.
 # Clonar el repositorio
 git clone https://github.com/Unbot2313/arquitectura_software_1
 cd arquitectura_software_1
+```
 
-# Instalar dependencias
+### Con uv
+
+```bash
 uv sync
+```
+
+### Con pip
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+pip install django psycopg2-binary
 ```
 
 ## Ejecutar
@@ -24,12 +36,20 @@ uv sync
 ```bash
 # Levantar PostgreSQL
 docker compose up -d
+```
 
-# Aplicar migraciones
+### Con uv
+
+```bash
 uv run python manage.py migrate
-
-# Iniciar servidor
 uv run python manage.py runserver
+```
+
+### Con pip
+
+```bash
+python manage.py migrate
+python manage.py runserver
 ```
 
 ## Rutas
